@@ -1,0 +1,34 @@
+{% extends 'account/base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Give Gift
+                    <small>Help us out! We need your help!</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li>
+                        <i class="fa fa-university"></i>  <a href="/courses">Registrar</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-compass"></i> {{ user.first_name }} {{ user.last_name }}
+                    </li>
+                    <li class="active">
+                        <i class="fa fa-child"></i> Give Gift
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="jumbotron">
+            <h1>Donations</h1>
+            <br/>
+            <br/>
+
+        </div>
+        <!-- /.row -->
+{% endblock content %}

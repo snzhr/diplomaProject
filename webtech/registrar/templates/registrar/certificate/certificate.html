@@ -1,0 +1,52 @@
+{% load staticfiles %}
+{% block content %}
+<!--{% if mark.is_public %}-->
+<html lang="en">
+  <body>
+  <style>
+      #img1{width:100px;float:left;padding-left:0px; }
+      #img2{width:250px;float:right; }
+
+</style>
+
+  <div id="div1"  >
+<img id="img1" src="http://www.iaau.edu.kg/javax.faces.resource/logo_4x.png.xhtml;jsessionid=KnJVohbrymEd0by9XP3-9dvvt8W4gDL7Z8pdenvd.unknown-host?ln=gfx">
+         <img id="img2" src="http://com.iaau.edu.kg/images/logo.png">
+
+    <div class="back" style="width:auto; height:575px; padding:20px;text-align:center; border: 10px solid #787878">
+     <div style="width:auto; height:525px; padding:20px; text-align:center; border: 5px solid #787878">
+
+
+         <h1 style="font-size:50px; font-weight:bold">Certificate of Completion</h1>
+               <br><br>
+        <span style="font-size:35px"><i>This is to certify that</i></span>
+        <br><br>
+
+         <span style="font-size:60px"> <b>{{ student.user.first_name }}</b> <b>{{ student.user.last_name }} </b></span><br><br>
+               <span style="font-size:25px"><i>has completed the course</i></span> <br/><br/>
+       <span style="font-size:30px"><b>{{ mark.course.title }}</b></span> <br/><br/>
+<span style="font-size:20px">with score of <b>{{ mark.percent }}% </b></span> <br/><br/><br/><br/>
+
+     </div>
+</div>
+      </div>
+
+
+    </body>
+</html>
+
+
+{% else %}
+<html>
+    <head>
+        <title>Permission Denied</title>
+    </head>
+    <body>
+        <h1>Permission Denied</h1>
+        <p>Student has chosen not to share the results of this certificate.</p>
+    </body>
+</html>
+{% endif %}
+
+
+{% endblock content %}
